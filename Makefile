@@ -6,8 +6,8 @@ EXE=red_merchant
 
 all: $(SOURCE) $(EXE)
 
-$(EXE): $(OBJ) utils.o
-	$(CC) $(OBJ) utils.o -o $@ -lm
+$(EXE): $(OBJ) utils.o trade_route.o ga.o
+	$(CC) $(OBJ) utils.o trade_route.o ga.o -o $@ -lm
 
 %.o: %.c
 	$(CC) $(CFLAGS) $< -o $@
